@@ -1,4 +1,4 @@
-# Lumina - Premium Story Platform
+# Jelly Novel - Premium Story Platform
 
 A Next.js 14 application focusing on immersive reading experiences using Framer Motion and Physics-based interactions.
 

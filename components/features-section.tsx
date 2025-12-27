@@ -33,7 +33,7 @@ export function FeaturesSection() {
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-4">Reinventing the Page</h2>
                     <p className="text-lg text-zinc-500 dark:text-zinc-400">
-                        Traditional ebooks are static. Lumina brings stories to life with technology that feels like magic.
+                        Traditional ebooks are static. Jelly Novel brings stories to life with technology that feels like magic.
                     </p>
                 </div>
 

@@ -11,7 +11,7 @@ export function SiteFooter() {
                             <div className="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 p-1.5 rounded-lg">
                                 <Sparkles className="w-5 h-5" />
                             </div>
-                            <span className="font-bold text-xl tracking-tight text-zinc-900 dark:text-white">Lumina</span>
+                            <span className="font-bold text-xl tracking-tight text-zinc-900 dark:text-white">Jelly Novel</span>
                         </Link>
                         <p className="text-zinc-500 dark:text-zinc-400 max-w-sm leading-relaxed">
                             Pioneering the next generation of interactive storytelling.
@@ -43,7 +43,7 @@ export function SiteFooter() {
 
                 <div className="pt-8 border-t border-zinc-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-sm text-zinc-500 dark:text-zinc-600">
-                        © {new Date().getFullYear()} Lumina Platform. All rights reserved.
+                        © {new Date().getFullYear()} Jelly Novel. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
                         <a href="#" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
