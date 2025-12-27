@@ -31,3 +31,17 @@
 .perspective-1000 {
   perspective: 1000px;
 }
+
+/* Grid Background Pattern */
+.bg-grid-zinc {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(161, 161, 170, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(161, 161, 170, 0.4) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+}
+
+.dark .bg-grid-zinc {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+}
