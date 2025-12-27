@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={cn(inter.className, "relative bg-zinc-950 text-white antialiased overflow-x-hidden min-h-screen selection:bg-purple-500/30 selection:text-purple-200")}>
         {/* Global Noise Overlay */}
         <div className="fixed inset-0 z-[100] pointer-events-none opacity-[0.04] select-none mix-blend-overlay">
