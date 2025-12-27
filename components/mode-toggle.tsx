@@ -7,6 +7,19 @@ import { motion } from "framer-motion"
 
 export function ModeToggle() {
     const { setTheme, theme } = useTheme()
+    const [mounted, setMounted] = React.useState(false)
+
+    React.useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    if (!mounted) {
+        return (
+            <button className="relative p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors w-9 h-9">
+                {/* Placeholder sized correctly to prevent layout shift */}
+            </button>
+        )
+    }
 
     return (
         <button
