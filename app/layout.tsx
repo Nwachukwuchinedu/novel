@@ -1,0 +1,35 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { cn } from '@/lib/utils';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+
+export const metadata: Metadata = {
+  title: 'Lumina | Premium Story',
+  description: 'The future of interactive storytelling.',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className="dark scroll-smooth">
+      <body className={cn(inter.className, "relative bg-zinc-950 text-white antialiased overflow-x-hidden min-h-screen selection:bg-purple-500/30 selection:text-purple-200")}>
+        {/* Global Noise Overlay */}
+        <div className="fixed inset-0 z-[100] pointer-events-none opacity-[0.04] select-none mix-blend-overlay">
+          <svg className="w-full h-full">
+            <filter id="noiseFilter">
+              <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="3" stitchTiles="stitch" />
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+          </svg>
+        </div>
+
+        {children}
+      </body>
+    </html>
+  );
+}
