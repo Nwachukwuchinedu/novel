@@ -31,4 +31,28 @@ export const stories = [
         coverUrl: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=1000',
         gridArea: 'md:col-span-2 md:row-span-1',
     },
+    {
+        id: '5',
+        title: 'Quantum Bloom',
+        author: 'Aisha M.',
+        abstract: 'Flowers that bloom in past and future simultaneously hold the cure for time itself.',
+        coverUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000',
+        gridArea: 'md:col-span-1 md:row-span-1',
+    },
+    {
+        id: '6',
+        title: 'Velvet Void',
+        author: 'Dante V.',
+        abstract: 'The silence of space is comfortable until it starts whispering back.',
+        coverUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1000',
+        gridArea: 'md:col-span-1 md:row-span-2',
+    },
+    {
+        id: '7',
+        title: 'Silicon Soul',
+        author: 'Rina Y.',
+        abstract: 'Can a robot feel love, or is it just a recursive loop of simulated affection?',
+        coverUrl: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000',
+        gridArea: 'md:col-span-2 md:row-span-1',
+    }
 ];

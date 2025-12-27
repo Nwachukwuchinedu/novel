@@ -29,7 +29,7 @@ export default function ReadingView({ params }: { params: Promise<{ id: string }
     }
 
     return (
-        <div className="min-h-screen bg-zinc-950 selection:bg-purple-500/30 selection:text-white">
+        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 selection:bg-purple-500/30 selection:text-zinc-900 dark:selection:text-white transition-colors duration-500">
             {/* Progress Bar */}
             <motion.div
                 className="fixed top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 origin-left z-50 shadow-[0_0_15px_rgba(168,85,247,0.6)]"
@@ -51,10 +51,10 @@ export default function ReadingView({ params }: { params: Promise<{ id: string }
                     <div className="absolute inset-0 bg-zinc-950/30 mix-blend-multiply" />
                 </motion.div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-50 dark:from-zinc-950 via-zinc-50/50 dark:via-zinc-950/50 to-transparent z-10" />
 
                 <div className="absolute top-8 left-8 z-20">
-                    <Link href="/" className="group p-3 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 hover:bg-black/60 transition flex items-center justify-center">
+                    <Link href="/" className="group p-3 rounded-full bg-white/40 dark:bg-black/40 backdrop-blur-md text-zinc-900 dark:text-white border border-black/5 dark:border-white/10 hover:bg-white/60 dark:hover:bg-black/60 transition flex items-center justify-center">
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                     </Link>
                 </div>
@@ -65,13 +65,13 @@ export default function ReadingView({ params }: { params: Promise<{ id: string }
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 20 }}
                     >
-                        <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-xs font-bold tracking-[0.2em] text-zinc-300 uppercase shadow-lg">
+                        <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-white/50 dark:bg-white/5 backdrop-blur-xl border border-zinc-200 dark:border-white/10 rounded-full text-xs font-bold tracking-[0.2em] text-zinc-700 dark:text-zinc-300 uppercase shadow-lg">
                             <span>Premium Story</span>
                         </div>
-                        <h1 className="text-5xl lg:text-8xl font-black text-white mb-6 tracking-tighter drop-shadow-2xl leading-[0.9]">
+                        <h1 className="text-5xl lg:text-8xl font-black text-zinc-900 dark:text-white mb-6 tracking-tighter drop-shadow-2xl leading-[0.9]">
                             {story.title}
                         </h1>
-                        <p className="text-xl text-zinc-200 font-medium tracking-wide">By {story.author}</p>
+                        <p className="text-xl text-zinc-700 dark:text-zinc-200 font-medium tracking-wide">By {story.author}</p>
                     </motion.div>
                 </div>
             </motion.header>
@@ -83,14 +83,14 @@ export default function ReadingView({ params }: { params: Promise<{ id: string }
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    className="prose prose-invert prose-lg lg:prose-xl leading-loose font-serif text-zinc-300"
+                    className="prose prose-lg lg:prose-xl leading-loose font-serif text-zinc-800 dark:text-zinc-300 dark:prose-invert"
                 >
-                    <p className="lead text-2xl lg:text-3xl text-zinc-100 font-sans font-light mb-16 border-l-4 border-purple-500 pl-8 italic leading-relaxed opacity-90">
+                    <p className="lead text-2xl lg:text-3xl text-zinc-900 dark:text-zinc-100 font-sans font-light mb-16 border-l-4 border-purple-500 pl-8 italic leading-relaxed opacity-90">
                         {story.abstract}
                     </p>
 
                     <p className="mb-10 selection:bg-cyan-500/20">
-                        <span className="float-left text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-zinc-600 mr-4 leading-[0.8] font-sans">T</span>
+                        <span className="float-left text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-600 mr-4 leading-[0.8] font-sans">T</span>
                         he silence in the server room was deafening, broken only by the rhythmic hum of the cooling units. It was a sound I had grown accustomed to, a lullaby for the sleepless nights spent chasing ghosts in the machine. But tonight, the hum felt different—sharper, almost aggressive. It vibrated in my teeth.
                     </p>
                     <p className="mb-10">
@@ -106,30 +106,30 @@ export default function ReadingView({ params }: { params: Promise<{ id: string }
                         The message regarding the protocol was clear: <em>Do not engage.</em> Yet, here I was, diving headfirst into the abyss. The interface shimmered, creating a hologram of a cityscape that defied gravity. Buildings floated in mid-air, tethered by beams of pure light.
                     </p>
 
-                    <div className="my-16 p-1 bg-gradient-to-br from-white/10 to-transparent rounded-2xl">
-                        <div className="bg-zinc-950/90 p-8 rounded-xl backdrop-blur-sm relative overflow-hidden">
+                    <div className="my-16 p-1 bg-gradient-to-br from-black/10 dark:from-white/10 to-transparent rounded-2xl">
+                        <div className="bg-white/80 dark:bg-zinc-950/90 p-8 rounded-xl backdrop-blur-sm relative overflow-hidden shadow-sm dark:shadow-none border border-zinc-200 dark:border-transparent">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 blur-[60px] rounded-full -mr-16 -mt-16 pointer-events-none" />
 
-                            <p className="text-center font-sans text-xs font-bold text-cyan-400 uppercase tracking-[0.3em] mb-8">Interaction Required</p>
+                            <p className="text-center font-sans text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-[0.3em] mb-8">Interaction Required</p>
 
                             <div className="grid gap-4">
-                                <button className="relative overflow-hidden w-full p-6 text-left rounded-xl bg-zinc-900 border border-white/5 hover:border-purple-500/50 transition-all group shadow-lg hover:shadow-purple-900/20">
+                                <button className="relative overflow-hidden w-full p-6 text-left rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-white/5 hover:border-purple-500/50 transition-all group shadow-sm hover:shadow-purple-900/20">
                                     <div className="relative z-10 flex justify-between items-center">
                                         <div>
-                                            <span className="block text-lg text-white font-bold group-hover:text-purple-300 transition-colors">Access the encrypted file</span>
+                                            <span className="block text-lg text-zinc-900 dark:text-white font-bold group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">Access the encrypted file</span>
                                             <span className="text-sm text-zinc-500 mt-1 block">Risk: High | Reward: Critical Intel</span>
                                         </div>
-                                        <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-purple-500 group-hover:text-white transition-all">
+                                        <div className="w-8 h-8 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center group-hover:bg-purple-500 group-hover:text-white transition-all">
                                             →
                                         </div>
                                     </div>
                                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                 </button>
 
-                                <button className="relative overflow-hidden w-full p-6 text-left rounded-xl bg-zinc-900 border border-white/5 hover:border-cyan-500/50 transition-all group shadow-lg hover:shadow-cyan-900/20">
+                                <button className="relative overflow-hidden w-full p-6 text-left rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-white/5 hover:border-cyan-500/50 transition-all group shadow-sm hover:shadow-cyan-900/20">
                                     <div className="relative z-10 flex justify-between items-center">
                                         <div>
-                                            <span className="block text-lg text-white font-bold group-hover:text-cyan-300 transition-colors">Terminate the connection</span>
+                                            <span className="block text-lg text-zinc-900 dark:text-white font-bold group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">Terminate the connection</span>
                                             <span className="text-sm text-zinc-500 mt-1 block">Risk: Low | Reward: Safety</span>
                                         </div>
                                     </div>
@@ -143,8 +143,8 @@ export default function ReadingView({ params }: { params: Promise<{ id: string }
                     </p>
                 </motion.div>
 
-                <div className="mt-32 pt-12 border-t border-white/5 text-center">
-                    <p className="text-zinc-600 italic font-medium tracking-wide">To be continued in Chapter 2</p>
+                <div className="mt-32 pt-12 border-t border-zinc-200 dark:border-white/5 text-center">
+                    <p className="text-zinc-500 dark:text-zinc-600 italic font-medium tracking-wide">To be continued in Chapter 2</p>
                 </div>
             </article>
         </div>
