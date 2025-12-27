@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: 'The future of interactive storytelling.',
 };
 
+
+
 export default function RootLayout({
   children,
 }: {

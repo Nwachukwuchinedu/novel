@@ -3,17 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-
 import { stories } from '@/lib/data';
-
-interface Story {
-    id: string;
-    title: string;
-    author: string;
-    abstract: string;
-    coverUrl: string;
-    gridArea: string; // for bento style sizes
-}
 
 export default function StoryGrid() {
     return (
